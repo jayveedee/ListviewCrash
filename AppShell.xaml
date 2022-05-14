@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ListviewCrash.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ListviewCrash"
+    Shell.FlyoutBehavior="Disabled">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ShellStyleDefault" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="CadetBlue" />
+                <Setter Property="Shell.TitleColor" Value="AliceBlue" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="CadetBlue" />
+                <Setter Property="Shell.TabBarTitleColor" Value="AliceBlue" />
+            </Style>
+            <Style BasedOn="{StaticResource ShellStyleDefault}" TargetType="TabBar" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <Tab Title="Tab1">
+            <ShellContent
+                Title="Hello, World!"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+        <Tab Title="Tab2">
+            <ShellContent
+                Title="Hello, World!"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+    </TabBar>
+
+</Shell>
